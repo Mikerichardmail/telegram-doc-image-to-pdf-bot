@@ -6,6 +6,6 @@ services:
     startCommand: python bot.py
     envVars:
       - key: BOT_TOKEN
-        sync: false     # add in Render dashboard
+        sync: false
       - key: PUBLIC_URL
-        sync: false     # set to your Render web service URL, e.g. https://<service>.onrender.com
+        sync: false
