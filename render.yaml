@@ -1,9 +1,11 @@
 services:
-  - type: worker
+  - type: web
     name: telegram-pdf-bot
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python bot.py
     envVars:
       - key: BOT_TOKEN
-        sync: false   # Render will prompt for this on first deploy
+        sync: false     # add in Render dashboard
+      - key: PUBLIC_URL
+        sync: false     # set to your Render web service URL, e.g. https://<service>.onrender.com
